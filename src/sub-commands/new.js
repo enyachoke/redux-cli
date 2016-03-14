@@ -22,7 +22,7 @@ class New extends SubCommand {
   run(cliArgs) {
     this.confirmGit();
     this.createDirTask.run(cliArgs).then(() => {
-      this.gitPullTask.run('git@github.com:davezuko/react-redux-starter-kit.git').then(() => {
+      this.gitPullTask.run('https://github.com/davezuko/react-redux-starter-kit.git').then(() => {
         this.createProjectSettings();
         this.resetGitHistory();
       });
